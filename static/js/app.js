@@ -3,7 +3,7 @@ function init() {
   var selector = d3.select("#selDataset");
   
   // Populate the dropdown with subject ID's from the list of sample Names
-    d3.json("data/samples.json").then((data) => {
+    d3.json("./data/samples.json").then((data) => {
       var subjectIds = data.names;
       subjectIds.forEach((id) => {
         selector
@@ -22,7 +22,7 @@ function init() {
 
 
 function updateMetadata(sample) {
-  d3.json("data/samples.json").then((data) => {
+  d3.json("./data/samples.json").then((data) => {
       var metadata = data.metadata;
       var filterArray = metadata.filter(sampleObject => sampleObject.id == sample);
       var result = filterArray[0];
@@ -67,7 +67,7 @@ function updateMetadata(sample) {
 
 
 function updateCharts(sample) {    
-  d3.json("data/samples.json").then((data) => {
+  d3.json("./data/samples.json").then((data) => {
   var samples = data.samples;
   var filterArray = samples.filter(sampleObject => sampleObject.id == sample);
   var result = filterArray[0];
