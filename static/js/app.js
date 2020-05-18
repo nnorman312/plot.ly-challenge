@@ -53,8 +53,8 @@ function updateMetadata(sample) {
      line: {
      color: '600000'
      },
-     paper_bgcolor: "#a5bdc6",
-     font: { color: "#85541d", family: "Serif" }
+     paper_bgcolor: "rgba(0,0,0,0)",
+     font: { color: "#000000", family: "Serif" }
    };
 
   
@@ -83,7 +83,7 @@ function updateCharts(sample) {
       marker: {
       size: sample_values,
       color: otu_ids,
-      colorscale:"Electric"
+      colorscale:"Earth"
       }
   };
   var data = [trace1];
